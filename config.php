@@ -1,5 +1,4 @@
 <?php
-<?php
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'boostunion_legacy';

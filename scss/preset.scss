@@ -1,5 +1,0 @@
-// 1️⃣ pull everything from Boost Union default preset first
-@import "../../../boost_union/scss/preset/default";
-
-// 2️⃣ then legacy overrides (namespaced inside .legacy-course)
-@import "legacy";

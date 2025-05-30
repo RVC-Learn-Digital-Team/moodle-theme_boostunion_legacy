@@ -20,14 +20,15 @@ class core_renderer extends \theme_boost_union\output\core_renderer {
     
     /**
      * Add extra body classes when this theme is active.
+     * 
+     * @param array $additionalclasses Additional classes to add
+     * @return string HTML fragment.
      */
-    public function body_attributes() {
-        $attributes = parent::body_attributes();
+    public function body_attributes($additionalclasses = []) {
+        // Add legacy-course to the additional classes
+        $additionalclasses[] = 'legacy-course';
         
-        // Add legacy-course class
-        $bodyclass = $this->body_css_classes(['legacy-course']);
-        $attributes = str_replace('class="', 'class="legacy-course ', $attributes);
-        
-        return $attributes;
+        // Call parent with the modified classes
+        return parent::body_attributes($additionalclasses);
     }
 }

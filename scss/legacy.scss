@@ -1,0 +1,13 @@
+/*
+ * Put *all* historical rules here.
+ * Make sure every selector lives under .legacy-course {}
+ */
+
+.legacy-course {
+  // Example: replace B2 .row-fluid with B5 utility
+  .row-fluid {
+    @extend .row !optional;
+  }
+
+  // More mappings …
+}

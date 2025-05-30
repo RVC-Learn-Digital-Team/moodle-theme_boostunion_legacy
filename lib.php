@@ -11,6 +11,7 @@ function theme_boostunion_legacy_get_main_scss_content($theme) {
     $custom = get_config('theme_boostunion_legacy', 'customscss');
     if (trim($custom)) {
         $scss .= "/* ---- admin custom SCSS ---- */" . $custom;
+    }
 
 
     return $scss;

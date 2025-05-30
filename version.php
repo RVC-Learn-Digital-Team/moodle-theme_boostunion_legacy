@@ -10,5 +10,5 @@ $plugin->maturity    = MATURITY_ALPHA;
 
 // Must have Boost Union already installed (change version to match yours)
 $plugin->dependencies = [
-    'theme_boost_union' => 2024041806,
+    'theme_boost_union' => 2024041807,
 ];

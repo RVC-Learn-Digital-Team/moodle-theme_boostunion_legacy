@@ -1,4 +1,5 @@
 <?php
+<?php
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'boostunion_legacy';
@@ -12,9 +13,6 @@ $THEME->scss = function($theme) {
 
 // Use Boost renderer factory but override core_renderer to inject body class
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
-
-// Inherit all layouts from parent
-$THEME->layouts = $THEME->parents[0]::$LAYOUTS ?? [];
 
 // Enable "Raw initial SCSS" and "Raw SCSS" settings from parent
 $THEME->extrascsscallback = 'theme_boost_union_get_extra_scss';

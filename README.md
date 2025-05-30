@@ -39,6 +39,19 @@ Example javascript self invoking function
 })();
 ```
 
+Useful for testing
+```js
+(function() {
+  // Example – debug whether or not legacy-course exists
+  if (document.body.classList.contains('legacy-course')) {
+     console.log("Legacy Course Found Here");
+  } else {
+     console.log("No Legacy Course On This Page");
+  }
+
+})();
+```
+
 ### What not to do
 Don’t paste ES-module import statements directly—js_init_code is evaluated inside RequireJS, not an ES-module context.
 If you need a larger script, drop it in /javascript/extra.js and paste only:

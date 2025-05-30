@@ -10,6 +10,9 @@ $THEME->scss = function($theme) {
     return theme_boostunion_legacy_get_main_scss_content($theme);
 };
 
+// Hook to initialize the page (for custom JS and body classes)
+$THEME->javascripts_footer = [];
+
 // Required: define layouts (inherit from parent)
 $THEME->layouts = [];
 
@@ -22,5 +25,8 @@ $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 // Enable "Raw initial SCSS" and "Raw SCSS" settings from parent
 $THEME->extrascsscallback = 'theme_boost_union_get_extra_scss';
 
-// Required: define which renderer classes this theme has
+// CSS post-processing
 $THEME->csspostprocess = 'theme_boostunion_legacy_process_css';
+
+// Initialize page callback
+$THEME->preprocess_scss = 'theme_boostunion_legacy_get_main_scss_content';

@@ -1,16 +1,21 @@
 <?php
 function theme_boostunion_legacy_get_main_scss_content($theme) {
     global $CFG;
-    $parentpreset = $CFG->dirroot.'/theme/boost_union/scss/preset/default.scss';
-    $legacy       = __DIR__.'/scss/legacy.scss';
-
-    $scss  = file_get_contents($parentpreset);
-    $scss .= "\n/* ---- legacy overrides ---- */\n";
-    $scss .= file_get_contents($legacy);
-
+    
+    // Use your preset.scss file instead of trying to load individual files
+    $preset = __DIR__ . '/scss/preset.scss';
+    
+    if (!file_exists($preset)) {
+        // Fallback to parent theme if preset doesn't exist
+        return file_get_contents($CFG->dirroot . '/theme/boost_union/scss/preset/default.scss');
+    }
+    
+    $scss = file_get_contents($preset);
+    
+    // Add custom SCSS from settings
     $custom = get_config('theme_boostunion_legacy', 'customscss');
     if (trim($custom)) {
-        $scss .= "/* ---- admin custom SCSS ---- */" . $custom;
+        $scss .= "\n/* ---- admin custom SCSS ---- */\n" . $custom;
     }
 
     return $scss;

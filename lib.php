@@ -1,7 +1,7 @@
 <?php
 function theme_boostunion_legacy_get_main_scss_content($theme) {
     global $CFG;
-    $parentpreset = $CFG->dirroot.'/theme/boostunion/scss/preset/default.scss';
+    $parentpreset = $CFG->dirroot.'/theme/boost_union/scss/preset/default.scss';
     $legacy       = __DIR__.'/scss/legacy.scss';
 
     $scss  = file_get_contents($parentpreset);

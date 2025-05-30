@@ -2,7 +2,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $THEME->name = 'boostunion_legacy';
-$THEME->parents = ['boostunion'];
+$THEME->parents = ['boost_union'];
 $THEME->sheets = []; // we compile SCSS instead
 
 // Pull the SCSS via helper in lib.php
@@ -17,4 +17,4 @@ $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->layouts = $THEME->parents[0]::$LAYOUTS ?? [];
 
 // Enable "Raw initial SCSS" and "Raw SCSS" settings from parent
-$THEME->extrascsscallback = 'theme_boostunion_get_extra_scss';
+$THEME->extrascsscallback = 'theme_boost_union_get_extra_scss';

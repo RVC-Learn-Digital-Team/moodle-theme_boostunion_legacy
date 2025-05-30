@@ -25,5 +25,6 @@ if ($ADMIN->fulltree) {
         '', PARAM_RAW, 80, 20
     ));
 
-    $settings->add($page);
+    //$settings->add($page);
+    $settings = $page; // Use the page as the settings object.
 }

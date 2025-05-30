@@ -1,6 +1,7 @@
 <?php
 $string['pluginname']   = 'Boost Union Legacy';
 $string['configtitle']  = 'Boost Union Legacy theme';
+$string['generalsettings'] = 'General settings';
 $string['enablelegacy'] = 'Enable legacy course tweaks';
 $string['enablelegacy_desc'] = 'Unchecked = behave exactly like Boost Union, useful for A/B testing.';
 $string['privacy:metadata'] = 'The Boost Union Legacy theme stores no personal data.';

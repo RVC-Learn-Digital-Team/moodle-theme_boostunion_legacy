@@ -13,7 +13,6 @@ function theme_boostunion_legacy_get_main_scss_content($theme) {
         $scss .= "/* ---- admin custom SCSS ---- */" . $custom;
     }
 
-
     return $scss;
 }
 
@@ -22,4 +21,12 @@ function theme_boostunion_legacy_page_init(moodle_page $page) {
         // true ⇒ run after DOM is ready, avoids FOUC.
         $page->requires->js_init_code($code, true);
     }
+}
+
+function theme_boostunion_legacy_process_css($css, $theme) {
+    // Allow parent theme to process CSS first
+    if (function_exists('theme_boost_union_process_css')) {
+        $css = theme_boost_union_process_css($css, $theme);
+    }
+    return $css;
 }

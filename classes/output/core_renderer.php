@@ -13,7 +13,7 @@ class core_renderer extends \theme_boost_union\output\core_renderer {
      */
     public function standard_head_html() {
         // Call page init to add custom JS
-        theme_boostunion_legacy_page_init($this->page);
+        // OR NOT! theme_boostunion_legacy_page_init($this->page);
         
         return parent::standard_head_html();
     }
